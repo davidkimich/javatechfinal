@@ -1,0 +1,120 @@
+.left-form {
+    -fx-background-color: linear-gradient(to bottom, #cad5cd, #cad5cd); /* Gradient from light gray to slightly darker gray */
+    -fx-border-color: #ddd; /* Lighter border */
+    -fx-border-width: .4px 0px .4px .4px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0); /* Soft drop shadow */
+}
+
+.right-form {
+    -fx-background-color: #fff; /* White background */
+    -fx-border-color: #ddd; /* Lighter border */
+    -fx-border-width: .4px .4px .4px 0px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0); /* Soft drop shadow */
+}
+
+.close {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 0); /* Soft drop shadow */
+}
+.close:hover {
+    -fx-background-color: #ccc; /* Slightly darker on hover */
+}
+
+.textfield {
+    -fx-background-color: #fafafa; /* Very light gray background */
+    -fx-background-radius: 4px;
+    -fx-border-color: #ccc; /* Lighter border */
+    -fx-border-width: .4px;
+    -fx-border-radius: 4px;
+    -fx-font-size: 13px;
+    -fx-font-family: "Arial";
+    -fx-text-fill: #333; /* Dark text color */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 2, 0, 0, 0); /* Soft drop shadow */
+}
+.textfield:focused {
+    -fx-background-color: #f0f0f0; /* Slightly darker background on focus */
+    -fx-border-color: #666; /* Lighter border on focus */
+    -fx-border-width: .8px;
+}
+
+.login-btn {
+    -fx-background-color: #4CAF50; /* Green button color */
+    -fx-background-radius: 5px;
+    -fx-text-fill: #fff; /* White text */
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 0, 0); /* Soft drop shadow */
+    -fx-transition: background-color 0.3s; /* Smooth color transition */
+}
+.login-btn:hover {
+    -fx-background-color: #45a049; /* Slightly darker green on hover */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.7), 10, 0, 0, 0); /* Slightly stronger drop shadow on hover */
+}
+
+.white-bg {
+    -fx-background-color: #f9f9f9; /* Very light gray background */
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0); /* Soft drop shadow */
+}
+.other-white-bg {
+    -fx-background-color: #eee; /* Lighter background color */
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0); /* Soft drop shadow */
+}
+.black-bg {
+    -fx-background-color: #333; /* Dark gray background */
+    -fx-effect: dropshadow(three-pass-box, rgba(255,255,255,0.2), 5, 0, 0, 0); /* Soft drop shadow */
+}
+.card {
+    -fx-background-color: #cad5cd;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0); /* Soft drop shadow */
+}
+
+.rootimage {
+    -fx-background-image: url('78792.jpg');
+    -fx-background-size: cover;
+    opacity: 0.4;
+}
+
+
+
+.clear-background {
+    -fx-background-color: transparent;
+}
+
+.table-view {
+    -fx-background-color: #fff; /* White background */
+    -fx-border-color: #ddd; /* Lighter border */
+    -fx-border-width: .4px;
+    -fx-border-radius: 5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 0); /* Soft drop shadow */
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #f0f0f0; /* Light gray background for column headers */
+}
+
+.table-view .column-header, .table-view .table-row-cell {
+    -fx-border-color: #ddd; /* Lighter border */
+    -fx-border-width: .4px 0px; /* Borders only on top and bottom */
+    -fx-padding: 5px 10px; /* Padding for column headers and cells */
+}
+
+.table-view .column-header:hover {
+    -fx-background-color: #e0e0e0; /* Light gray background on hover */
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #f9f9f9; /* Very light gray background for odd rows */
+}
+
+.table-view .table-row-cell:hover {
+    -fx-background-color: #f0f0f0; /* Slightly darker background on hover */
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #cce0ff; /* Light blue background for selected rows */
+}

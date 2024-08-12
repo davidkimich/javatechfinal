@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="601.0" prefWidth="1000.0" styleClass="rootimage" stylesheets="@LoginDesign.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxapp.MainController">
+   <children>
+      <AnchorPane fx:id="inventorytable" prefHeight="100.0" prefWidth="1000.0" styleClass="right-form" stylesheets="@LoginDesign.css">
+         <children>
+            <ImageView fitHeight="88.0" fitWidth="734.0" layoutX="206.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/LOGOZZ.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane layoutY="2.0" prefHeight="600.0" prefWidth="200.0" styleClass="left-form" stylesheets="@LoginDesign.css">
+         <children>
+            <ImageView fitHeight="182.0" fitWidth="190.0" layoutX="12.0" layoutY="-30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/USERPROFILE.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="217.0" fitWidth="192.0" layoutX="-1.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/titled.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="182.0" fitWidth="178.0" layoutX="6.0" layoutY="385.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/titled.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="24.0" layoutY="117.0" prefHeight="100.0" prefWidth="142.0" text="Welcome" textAlignment="CENTER" textFill="#fffefe">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="24.0" layoutY="208.0" prefHeight="295.0" prefWidth="141.0" styleClass="right-form" stylesheets="@LoginDesign.css">
+               <children>
+                  <Button fx:id="pane1btn" layoutX="6.0" layoutY="27.0" mnemonicParsing="false" onAction="#openmain" prefHeight="26.0" prefWidth="133.0" styleClass="login-btn" stylesheets="@LoginDesign.css" text="Home" />
+                  <Button fx:id="pane2btn" layoutX="5.0" layoutY="63.0" mnemonicParsing="false" onAction="#openpain2" prefHeight="26.0" prefWidth="134.0" styleClass="login-btn" stylesheets="@LoginDesign.css" text="Month Statistics" />
+                  <Button layoutX="3.0" layoutY="250.0" mnemonicParsing="false" onAction="#openpain3" prefHeight="26.0" prefWidth="134.0" styleClass="login-btn" stylesheets="@LoginDesign.css" text="Inventory List" />
+                  <Button layoutX="6.0" layoutY="140.0" mnemonicParsing="false" onAction="#openpain4" prefHeight="18.0" prefWidth="134.0" styleClass="login-btn" stylesheets="@LoginDesign.css" text="Edit Item" />
+                  <Button layoutX="5.0" layoutY="176.0" mnemonicParsing="false" onAction="#openpain5" prefHeight="26.0" prefWidth="134.0" styleClass="login-btn" stylesheets="@LoginDesign.css" text="Inventory In/out" />
+                  <Button fx:id="pane9btn" layoutX="5.0" layoutY="100.0" mnemonicParsing="false" onAction="#openpain9" prefHeight="26.0" prefWidth="134.0" styleClass="login-btn" stylesheets="@LoginDesign.css" text="Edit Supplier" />
+                  <Button layoutX="5.0" layoutY="212.0" mnemonicParsing="false" onAction="#openpain6" prefHeight="26.0" prefWidth="134.0" styleClass="login-btn" stylesheets="@LoginDesign.css" text="Edit Invoices" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Button fx:id="closebutton" layoutX="975.0" layoutY="1.0" mnemonicParsing="false" onAction="#close" styleClass="close" stylesheets="@LoginDesign.css" text="x" textFill="RED" />
+      <AnchorPane fx:id="pane1" layoutX="218.0" layoutY="111.0" prefHeight="480.0" prefWidth="770.0" styleClass="clear-background" stylesheets="@LoginDesign.css">
+         <children>
+            <ImageView fitHeight="252.0" fitWidth="726.0" layoutX="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/inventorymanagement1.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="41.0" layoutY="339.0" prefHeight="78.0" prefWidth="178.0" styleClass="card" stylesheets="@LoginDesign.css">
+               <children>
+                  <Label layoutX="23.0" layoutY="14.0" text="Inventory In Value" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="inventoryin" layoutX="23.0" layoutY="41.0" prefHeight="18.0" prefWidth="92.0" text="0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="306.0" layoutY="339.0" prefHeight="78.0" prefWidth="178.0" styleClass="card" stylesheets="@LoginDesign.css">
+               <children>
+                  <Label layoutX="23.0" layoutY="14.0" text="Inventory out value" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="inventoryout" layoutX="22.0" layoutY="41.0" prefHeight="18.0" prefWidth="92.0" text="0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="549.0" layoutY="339.0" prefHeight="78.0" prefWidth="178.0" styleClass="card" stylesheets="@LoginDesign.css">
+               <children>
+                  <Label layoutX="4.0" layoutY="14.0" text="current Inventory value" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="currentinventoryvalue" layoutX="26.0" layoutY="41.0" prefHeight="18.0" prefWidth="92.0" text="0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="49.0" layoutY="274.0" prefHeight="132.0" prefWidth="178.0" styleClass="card" stylesheets="@LoginDesign.css" visible="false">
+               <children>
+                  <Label layoutX="15.0" layoutY="14.0" text="Today's Sales Value" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="todaysales" layoutX="13.0" layoutY="40.0" prefHeight="18.0" prefWidth="92.0" text="0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="98.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/checked.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="296.0" layoutY="274.0" prefHeight="132.0" prefWidth="178.0" styleClass="card" stylesheets="@LoginDesign.css" visible="false">
+               <children>
+                  <Label layoutX="15.0" layoutY="14.0" text="Today's Input Value" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="todayin" layoutX="13.0" layoutY="40.0" prefHeight="18.0" prefWidth="92.0" text="0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="98.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/checked.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane2" layoutX="218.0" layoutY="111.0" prefHeight="480.0" prefWidth="769.0" styleClass="white-bg" stylesheets="@LoginDesign.css" visible="false">
+         <children>
+            <AnchorPane layoutX="22.0" layoutY="29.0" prefHeight="78.0" prefWidth="726.0" styleClass="other-white-bg" stylesheets="@LoginDesign.css">
+               <children>
+                  <Label layoutX="23.0" layoutY="22.0" text="MONTH STATISTICS" textFill="#0e6e29">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <BarChart fx:id="barChart" layoutX="13.0" layoutY="116.0" prefHeight="348.0" prefWidth="750.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane3" layoutX="218.0" layoutY="111.0" prefHeight="480.0" prefWidth="770.0" styleClass="white-bg" stylesheets="@LoginDesign.css" visible="false">
+         <children>
+            <AnchorPane layoutX="21.0" layoutY="46.0" prefHeight="396.0" prefWidth="734.0" styleClass="other-white-bg" stylesheets="@LoginDesign.css">
+               <children>
+                  <TableView fx:id="inventorytables" layoutX="34.0" layoutY="9.0" prefHeight="379.0" prefWidth="674.0">
+                     <columns>
+                        <TableColumn fx:id="inventoryid" prefWidth="90.39996337890625" text="ID" />
+                        <TableColumn fx:id="inventorydescription" prefWidth="247.99990844726562" text="Description" />
+                        <TableColumn fx:id="inventoryproductid" prefWidth="188.800048828125" text="Product ID" />
+                        <TableColumn fx:id="inventoryquantity" prefWidth="146.4000244140625" text="Quantity" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <Label layoutX="292.0" layoutY="14.0" text="INVENTORY LIST" textFill="#116b31">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane4" layoutX="217.0" layoutY="111.0" prefHeight="480.0" prefWidth="770.0" styleClass="white-bg" stylesheets="@LoginDesign.css" visible="false">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="37.0" prefHeight="278.0" prefWidth="166.0" styleClass="other-white-bg" stylesheets="@LoginDesign.css">
+               <children>
+                  <Label layoutX="45.0" layoutY="14.0" text="Add Item" textFill="#0f6931">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="45.0" layoutY="238.0" mnemonicParsing="false" onAction="#addItem" styleClass="login-btn" stylesheets="@LoginDesign.css" text="Add Item" />
+                  <TextField fx:id="pane4itemname" layoutX="9.0" layoutY="66.0" promptText="Item name" />
+                  <TextField fx:id="pane4itemprice" layoutX="9.0" layoutY="113.0" promptText="Item price" />
+                  <TextField fx:id="pane4itemdescription" layoutX="9.0" layoutY="163.0" prefWidth="150.0" promptText="Item description" />
+                  <Label fx:id="pane4errorcode1" layoutY="220.0" prefHeight="12.0" prefWidth="169.0" textAlignment="CENTER" textFill="#245de1">
+                     <font>
+                        <Font name="System Bold" size="8.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pane4errorcode2" layoutX="-3.0" layoutY="220.0" prefHeight="12.0" prefWidth="170.0" textAlignment="CENTER" textFill="#e70303">
+                     <font>
+                        <Font name="System Bold" size="8.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="12.0" layoutY="46.0" prefHeight="14.0" prefWidth="92.0" text="Item Name:" textFill="#0f6931">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="12.0" layoutY="92.0" prefHeight="14.0" prefWidth="92.0" text="Item Price:" textFill="#0f6931">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="12.0" layoutY="139.0" prefHeight="19.0" prefWidth="118.0" text="Item Description:" textFill="#0f6931">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="pane44itemname" layoutX="9.0" layoutY="213.0" promptText="Item name" visible="false" />
+                  <TextField fx:id="pane44itemprice" layoutX="19.0" layoutY="223.0" promptText="Item name" visible="false" />
+                  <TextField fx:id="pane44itemdescription" layoutX="15.0" layoutY="210.0" promptText="Item name" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="197.0" layoutY="37.0" prefHeight="428.0" prefWidth="558.0" styleClass="other-white-bg" stylesheets="@LoginDesign.css">
+               <children>
+                  <TableView fx:id="producttable" layoutX="18.0" layoutY="21.0" prefHeight="386.0" prefWidth="521.0">
+                     <columns>
+                        <TableColumn fx:id="productidtable" prefWidth="75.0" text="Item Id" />
+                        <TableColumn fx:id="productnametable" prefWidth="140.79998779296875" text="Item Name" />
+                        <TableColumn fx:id="productpricetable" prefWidth="127.2000732421875" text="Item Price" />
+                        <TableColumn fx:id="productdescriptiontable" minWidth="8.79998779296875" prefWidth="179.9998779296875" text="Item Description" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="14.0" layoutY="328.0" prefHeight="138.0" prefWidth="166.0" styleClass="other-white-bg" stylesheets="@LoginDesign.css">
+               <children>
+                  <Label layoutX="15.0" layoutY="14.0" text="Remove/Update" textFill="#0f6931">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="31.0" layoutY="40.0" mnemonicParsing="false" onAction="#deleteSelectedItem" styleClass="login-btn" stylesheets="@LoginDesign.css" text="Remove Item" />
+                  <Label fx:id="pane4errorcode3" layoutX="68.0" layoutY="112.0" prefHeight="12.0" prefWidth="26.0" textAlignment="CENTER" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="8.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pane4errorcode4" layoutX="16.0" layoutY="118.0" prefHeight="12.0" prefWidth="133.0" textAlignment="CENTER" textFill="#0a00ff">
+                     <font>
+                        <Font name="System Bold" size="8.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="31.0" layoutY="79.0" mnemonicParsing="false" onAction="#updateSelectedItem" prefHeight="26.0" prefWidth="104.0" styleClass="login-btn" stylesheets="@LoginDesign.css" text="Update Item" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane5" layoutX="217.0" layoutY="111.0" prefHeight="480.0" prefWidth="770.0" styleClass="white-bg" stylesheets="@LoginDesign.css" visible="false">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="42.0" prefHeight="396.0" prefWidth="118.0" styleClass="other-white-bg" stylesheets="@LoginDesign.css">
+               <children>
+                  <AnchorPane layoutX="10.0" layoutY="14.0" prefHeight="52.0" prefWidth="98.0" styleClass="card" stylesheets="@LoginDesign.css">
+                     <children>
+                        <Button layoutX="11.0" layoutY="13.0" mnemonicParsing="false" onAction="#openpain51" prefHeight="26.0" prefWidth="75.0" styleClass="login-btn" stylesheets="@LoginDesign.css" text=" In" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="78.0" prefHeight="52.0" prefWidth="98.0" styleClass="card" stylesheets="@LoginDesign.css">
+                     <children>
+                        <Label layoutX="23.0" layoutY="14.0" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#openpain52" prefHeight="26.0" prefWidth="75.0" styleClass="login-btn" stylesheets="@LoginDesign.css" text=" out" />
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="18.0" layoutY="14.0" textFill="#0f6931">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pane51" layoutX="145.0" layoutY="42.0" prefHeight="396.0" prefWidth="610.0" styleClass="other-white-bg" stylesheets="@LoginDesign.css">
+               <children>
+                  <Label layoutX="238.0" layoutY="14.0" text="SUPPLY IN" textFill="#0f6931">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="pane5inputname" layoutX="35.0" layoutY="56.0" promptText="Input Name" styleClass="textfield" stylesheets="@LoginDesign.css" />
+                  <TextField fx:id="pane5suppliername" layoutX="35.0" layoutY="99.0" promptText="Supplier ID" styleClass="textfield" stylesheets="@LoginDesign.css" />
+                  <TextArea fx:id="pane5inputdescription" layoutX="35.0" layoutY="145.0" prefHeight="60.0" prefWidth="230.0" promptText="Input Description" stylesheets="@LoginDesign.css" />
+                  <Button fx:id="adddetails" layoutX="35.0" layoutY="242.0" mnemonicParsing="false" onAction="#addOrderInfunc" prefHeight="26.0" prefWidth="125.0" styleClass="login-btn" stylesheets="@LoginDesign.css" text="ADD DETAILS" />
+                  <Label fx:id="errordetector" layoutX="42.0" layoutY="307.0" prefHeight="18.0" prefWidth="288.0" textFill="#fc0000">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pane52" layoutX="145.0" layoutY="42.0" prefHeight="396.0" prefWidth="610.0" styleClass="other-white-bg" stylesheets="@LoginDesign.css" visible="false">
+               <children>
+                  <Label layoutX="238.0" layoutY="14.0" text="SUPPLY OUT" textFill="#0f6931">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="pane5itemname1" layoutX="35.0" layoutY="56.0" promptText="Input Name" styleClass="textfield" stylesheets="@LoginDesign.css" />
+                  <TextField fx:id="pane5itemrecipient1" layoutX="35.0" layoutY="99.0" promptText="Supplier ID" styleClass="textfield" stylesheets="@LoginDesign.css" />
+                  <TextArea fx:id="pane5itemdescription1" layoutX="35.0" layoutY="145.0" prefHeight="60.0" prefWidth="230.0" promptText="Input Description" stylesheets="@LoginDesign.css" />
+                  <Button fx:id="adddetails1" layoutX="35.0" layoutY="242.0" mnemonicParsing="false" onAction="#addOrderOutfunc" prefHeight="26.0" prefWidth="125.0" styleClass="login-btn" stylesheets="@LoginDesign.css" text="ADD DETAILS" />
+                  <Label fx:id="errordetector1" layoutX="42.0" layoutY="307.0" prefHeight="18.0" prefWidth="288.0" textFill="#fc0000">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane6" layoutX="217.0" layoutY="111.0" prefHeight="480.0" prefWidth="770.0" styleClass="white-bg" stylesheets="@LoginDesign.css" visible="false">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="42.0" prefHeight="396.0" prefWidth="118.0" styleClass="other-white-bg" stylesheets="@LoginDesign.css">
+               <children>
+                  <AnchorPane layoutX="10.0" layoutY="14.0" prefHeight="52.0" prefWidth="98.0" styleClass="card" stylesheets="@LoginDesign.css">
+                     <children>
+                        <Button layoutX="11.0" layoutY="13.0" mnemonicParsing="false" onAction="#openpain521" prefHeight="26.0" prefWidth="75.0" styleClass="login-btn" stylesheets="@LoginDesign.css" text=" In" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="78.0" prefHeight="52.0" prefWidth="98.0" styleClass="card" stylesheets="@LoginDesign.css">
+                     <children>
+                        <Label layoutX="23.0" layoutY="14.0" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#openpain522" prefHeight="26.0" prefWidth="75.0" styleClass="login-btn" stylesheets="@LoginDesign.css" text=" out" />
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="18.0" layoutY="14.0" textFill="#0f6931">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pane511" layoutX="145.0" layoutY="42.0" prefHeight="396.0" prefWidth="610.0" styleClass="other-white-bg" stylesheets="@LoginDesign.css" visible="false">
+               <children>
+                  <AnchorPane layoutX="21.0" layoutY="8.0" prefHeight="379.0" prefWidth="582.0" styleClass="card" stylesheets="@LoginDesign.css">
+                     <children>
+                        <TableView layoutX="19.0" layoutY="14.0" prefHeight="314.0" prefWidth="550.0">
+                           <columns>
+                              <TableColumn prefWidth="74.4000244140625" text="C2" />
+                              <TableColumn prefWidth="76.79998779296875" text="C1" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="236.0" layoutY="338.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="138.0" styleClass="login-btn" stylesheets="@LoginDesign.css" text="Delete" />
+                        <Label layoutX="412.0" layoutY="342.0" prefHeight="18.0" prefWidth="192.0" text="invoice deleted successfully" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pane521" layoutX="145.0" layoutY="42.0" prefHeight="396.0" prefWidth="610.0" styleClass="other-white-bg" stylesheets="@LoginDesign.css">
+               <children>
+                  <AnchorPane layoutX="-1.0" layoutY="8.0" prefHeight="379.0" prefWidth="610.0" styleClass="card" stylesheets="@LoginDesign.css">
+                     <children>
+                        <Button layoutX="236.0" layoutY="338.0" mnemonicParsing="false" onAction="#deleteSelectedOrder" prefHeight="26.0" prefWidth="138.0" styleClass="login-btn" stylesheets="@LoginDesign.css" text="Delete" />
+                        <TableView fx:id="orderintable" layoutX="6.0" layoutY="39.0" prefHeight="270.0" prefWidth="597.0">
+                          <columns>
+                            <TableColumn fx:id="o1" prefWidth="39.20001220703125" text="ID" />
+                            <TableColumn fx:id="o2" prefWidth="63.199951171875" text="Acc ID" />
+                              <TableColumn fx:id="o3" prefWidth="97.59994506835938" text="Order Name" />
+                              <TableColumn fx:id="o4" prefWidth="87.20001220703125" text="Order Price" />
+                              <TableColumn fx:id="o5" minWidth="1.60003662109375" prefWidth="87.199951171875" text="Order Desc" />
+                              <TableColumn fx:id="o6" minWidth="0.0" prefWidth="66.39990234375" text="O.D. ID" />
+                              <TableColumn fx:id="o7" minWidth="1.5999755859375" prefWidth="67.199951171875" text="Supp ID" />
+                              <TableColumn fx:id="o8" prefWidth="93.5999755859375" text="Order Date" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="221.0" prefHeight="46.0" prefWidth="166.0" text="IN ORDERS" textAlignment="CENTER" textFill="#119e13">
+                           <font>
+                              <Font name="System Bold" size="31.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pane522" layoutX="145.0" layoutY="42.0" prefHeight="396.0" prefWidth="610.0" styleClass="other-white-bg" stylesheets="@LoginDesign.css" visible="false">
+               <children>
+                  <AnchorPane layoutX="-1.0" layoutY="8.0" prefHeight="379.0" prefWidth="610.0" styleClass="card" stylesheets="@LoginDesign.css">
+                     <children>
+                        <Button layoutX="236.0" layoutY="338.0" mnemonicParsing="false" onAction="#deleteSelectedOrders" prefHeight="26.0" prefWidth="138.0" styleClass="login-btn" stylesheets="@LoginDesign.css" text="Delete" />
+                        <TableView fx:id="orderstable" layoutX="6.0" layoutY="39.0" prefHeight="270.0" prefWidth="597.0">
+                           <columns>
+                              <TableColumn fx:id="os1" prefWidth="35.20001220703125" text="ID" />
+                              <TableColumn fx:id="os2" prefWidth="56.79998779296875" text="Acc ID" />
+                              <TableColumn fx:id="os3" prefWidth="80.79995727539062" text="Ord Name" />
+                              <TableColumn fx:id="os4" prefWidth="74.40008544921875" text="Ord Price" />
+                              <TableColumn fx:id="os5" minWidth="1.60003662109375" prefWidth="99.20001220703125" text="Ord Recipient" />
+                              <TableColumn fx:id="os6" minWidth="0.0" prefWidth="79.20001220703125" text="Ord Desc" />
+                              <TableColumn fx:id="os7" minWidth="1.5999755859375" prefWidth="68.79998779296875" text="Supp ID" />
+                              <TableColumn fx:id="os8" prefWidth="110.4000244140625" text="Ord Date" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="205.0" prefHeight="46.0" prefWidth="200.0" text="OUT ORDERS" textAlignment="CENTER" textFill="#119e13">
+                           <font>
+                              <Font name="System Bold" size="31.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane7" layoutX="217.0" layoutY="111.0" prefHeight="480.0" prefWidth="770.0" styleClass="white-bg" stylesheets="@LoginDesign.css" visible="false">
+         <children>
+            <AnchorPane layoutX="60.0" layoutY="30.0" prefHeight="414.0" prefWidth="659.0" styleClass="other-white-bg" stylesheets="@LoginDesign.css">
+               <children>
+                  <TableView layoutX="20.0" layoutY="91.0" prefHeight="295.0" prefWidth="618.0">
+                     <columns>
+                        <TableColumn prefWidth="64.00006103515625" text="Invoice ID" />
+                        <TableColumn prefWidth="132.7999267578125" text="Invoice Name" />
+                        <TableColumn prefWidth="116.0" text="Invoice Price" />
+                        <TableColumn prefWidth="124.79986572265625" text="Invoice Reciever" />
+                        <TableColumn prefWidth="179.19998779296873" text="Order Description" />
+                     </columns>
+                  </TableView>
+                  <TextField layoutX="482.0" layoutY="32.0" promptText="search" />
+                  <Label layoutX="41.0" layoutY="27.0" text="Invoice (out) List" textFill="#116b31">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane9" layoutX="218.0" layoutY="111.0" prefHeight="480.0" prefWidth="770.0" styleClass="white-bg" stylesheets="@LoginDesign.css" visible="false">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="37.0" prefHeight="278.0" prefWidth="166.0" styleClass="other-white-bg" stylesheets="@LoginDesign.css">
+               <children>
+                  <Label layoutX="30.0" layoutY="14.0" text="Add Supplier" textFill="#0f6931">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="32.0" layoutY="232.0" mnemonicParsing="false" onAction="#addSupplier" styleClass="login-btn" stylesheets="@LoginDesign.css" text="Add Supplier" />
+                  <TextField fx:id="pane9suppliername" layoutX="9.0" layoutY="88.0" promptText="Supplier name" />
+                  <TextField fx:id="pane9supplierdescription" layoutX="9.0" layoutY="133.0" promptText="Supplier Info" />
+                  <Label fx:id="pane9errorcode1" layoutX="7.0" layoutY="197.0" prefHeight="12.0" prefWidth="150.0" textAlignment="CENTER" textFill="#245de1">
+                     <font>
+                        <Font name="System Bold" size="8.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="197.0" layoutY="37.0" prefHeight="428.0" prefWidth="558.0" styleClass="other-white-bg" stylesheets="@LoginDesign.css">
+               <children>
+                  <TableView fx:id="suppliertable" layoutX="18.0" layoutY="21.0" prefHeight="386.0" prefWidth="521.0">
+                     <columns>
+                        <TableColumn fx:id="supplieridtable" prefWidth="75.0" text="Supplier Id" />
+                        <TableColumn fx:id="suppliernametable" prefWidth="109.60003662109375" text="Supplier Name" />
+                        <TableColumn fx:id="supplierdescriptiontable" prefWidth="335.2000366210938" text="Supplier Description" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="14.0" layoutY="328.0" prefHeight="138.0" prefWidth="166.0" styleClass="other-white-bg" stylesheets="@LoginDesign.css">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text=" Remove Supplier" textFill="#0f6931">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="23.0" layoutY="76.0" mnemonicParsing="false" onAction="#deletesupplier" prefHeight="26.0" prefWidth="126.0" styleClass="login-btn" stylesheets="@LoginDesign.css" text="Remove Item" />
+                  <Label fx:id="pane9errorcode2" layoutX="9.0" layoutY="112.0" prefHeight="12.0" prefWidth="150.0" textAlignment="CENTER" textFill="#e70303">
+                     <font>
+                        <Font name="System Bold" size="8.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="23.0" layoutY="40.0" mnemonicParsing="false" onAction="#deletesupplier" prefHeight="26.0" prefWidth="126.0" styleClass="login-btn" stylesheets="@LoginDesign.css" text="Update Supplier" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane8" layoutX="218.0" layoutY="111.0" prefHeight="480.0" prefWidth="770.0" styleClass="white-bg" stylesheets="@LoginDesign.css" visible="false">
+         <children>
+            <AnchorPane layoutX="60.0" layoutY="30.0" prefHeight="414.0" prefWidth="659.0" styleClass="other-white-bg" stylesheets="@LoginDesign.css">
+               <children>
+                  <TextField layoutX="482.0" layoutY="32.0" promptText="search" />
+                  <Label layoutX="35.0" layoutY="27.0" text="Order (in) List" textFill="#116b31">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <TableView layoutX="20.0" layoutY="104.0" prefHeight="295.0" prefWidth="618.0">
+                     <columns>
+                        <TableColumn prefWidth="64.00006103515625" text="Order ID" />
+                        <TableColumn prefWidth="132.7999267578125" text="Order Name" />
+                        <TableColumn prefWidth="116.0" text="Order Price" />
+                        <TableColumn prefWidth="124.79986572265625" text="Supplier" />
+                        <TableColumn prefWidth="179.19998779296873" text="Order Description" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

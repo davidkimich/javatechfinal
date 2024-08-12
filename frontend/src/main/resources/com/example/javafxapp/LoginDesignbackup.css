@@ -1,0 +1,72 @@
+.left-form{
+    -fx-background-color: linear-gradient(to bottom right, #272b3f, #256b51);
+    -fx-border-color: #000;
+    -fx-border-width: .4px 0px .4px .4px;
+}
+
+.right-form{
+    -fx-background-color: #000; /* Changed to black */
+    -fx-border-color: #000;
+    -fx-border-width: .4px .4px .4px 0px;
+}
+
+.close{
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+.close:hover{
+    -fx-background-color: #ff3547;
+}
+
+.textfield{
+    -fx-background-color: linear-gradient(to bottom, #1b1e24, #1a1e22); /* Darker background */
+    -fx-background-radius: 4px;
+    -fx-border-color: #000;
+    -fx-border-width: .4px;
+    -fx-border-radius: 4px;
+    -fx-font-size: 13px;
+    -fx-font-family: "Arial";
+    -fx-text-fill: #fff; /* Text color changed to white */
+}
+.textfield:focused{
+    -fx-background-color: #1a1e22; /* Darker focused background */
+    -fx-border-color: linear-gradient(to bottom right, #272b3f, #256b51);
+    -fx-border-width: .8px;
+}
+
+.login-btn{
+    -fx-background-color: linear-gradient(to bottom, #00fffc, #00fffc); /* Neon cyan color */
+    -fx-background-radius: 5px;
+    -fx-text-fill: #000; /* Text color changed to black */
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-cursor: hand;
+}
+.login-btn:hover{
+    -fx-background-color: linear-gradient(to bottom, #00fffc, #00fffc); /* Neon cyan color */
+}
+
+.white-bg{
+    -fx-background-color: #fff;
+    -fx-background-radius: 8px;
+}
+.other-white-bg{
+    -fx-background-color: #d4d2d2;
+    -fx-background-radius: 8px;
+}
+.black-bg{
+    -fx-background-color: black;
+}
+.card{
+    -fx-background-color: linear-gradient(to right, #2b303c, #525968);
+    -fx-background-radius: 5px;
+}
+
+.rootimage{
+    -fx-background-image: url('pexels-cottonbro-studio-7019259.jpg');
+    -fx-background-size: cover;
+}
+
+.clear-background {
+    -fx-background-color: transparent;
+}
